@@ -8,10 +8,7 @@ logging.basicConfig(level=logging.CRITICAL)
 ssh = paramiko.SSHClient()
 
 # Mengambil list IP address dari file
-# ip_list = pd.read_csv("./data/ip_addresses.csv")
-ip_list = pd.read_csv("./data/ip_test.csv")
-# ip_list = pd.read_csv("./data/ip_kalibata.csv")
-# ip_list = pd.read_csv("./data/ip_rak12.csv")
+ip_list = pd.read_csv("./data/ip_addresses.csv")
 
 def excute():
     ssh.connect(hostname=ip_address, port=ip_port, username=user_name, password=pswd)
